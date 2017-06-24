@@ -2,7 +2,6 @@ package first;
 import java.math.BigInteger; 
 
 public class Fibonacci { 
-	
 		 public static void main(String[] args) {
 			 BigInteger a[] = new BigInteger[100];
 			  a[0]=new BigInteger("1");
