@@ -110,6 +110,10 @@ input::-webkit-input-placeholder {
 .save-pass{
     float: left;
 }
+.forget-pass{
+    float:right;
+    color: #468BEA;
+}
 .save-text{
     float: right;
     color: #DD4B39;
