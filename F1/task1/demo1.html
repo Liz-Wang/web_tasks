@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>登录界面1实现</title>
+	<link href="demo1.css" type="text/css" rel="stylesheet"> 
+	<!-- Bootstrap core CSS -->
+    	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    	<link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+	<link href="demo1.css" type="text/css" rel="stylesheet">
+	<script src="demo1.js"></script>
+
+</head>
+
+<body>
+
+<div class="box ">
+	<div class="login-box">
+		<div class="logo">
+            		<div class="logo-block-top">
+            		</div>
+            		<div class="logo-block-bottom">
+            		</div>
+        		</div>
+		<div class="box-title">
+			<p class="text-center">用户登录</p>
+		</div>
+		<div class="login-form">
+		<!--开始对登陆表单的创建-->
+		<form class="form-horizontal" role="form">
+			<div class="form-group">
+			   	<div class="col-sm-12">
+			   	
+			      	<input id="uname" type="text" class="input-text" name="usename" required >
+			      	<label class="form-label">用户名</label>
+			    	
+			     	</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="col-sm-12">
+			      	<input  id="pwd" type="password" class="input-text" name="password" required>
+			      	<label class="form-label">密码</label>
+			    	</div>
+			 </div>
+		
+		<!--开始对密码选项的创建-->
+			<div class="pass-box">
+				<div class="  flex1 ">
+					<div class="text-left">
+						<a class="forget-pass" href="#" onclick="forpwd()">忘记密码</a>
+					</div>		
+				</div>
+				<div class="  flex2 ">
+					<div class="text-right">
+						<input type="checkbox" id="checkbox-1-1" class="regular-checkbox" /><label for="checkbox-1-1"></label>
+					</div>
+				</div>
+				<div class=" flex3 ">
+					<div class="text-right">
+						<span class="rem-pass">记住密码</span>
+						
+					</div>		
+				</div>
+			</div>
+			</div>
+			<button  class="login-button" onclick="return login()">
+				<span class="icon-login"></span>
+			</button>
+		</form>
+
+	</div>
+</div>
+</html>

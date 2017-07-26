@@ -1,0 +1,250 @@
+html,body{
+	height:100%;
+	background-color: #FF3366;
+}
+
+.box{
+  	margin: 0 auto;
+  	position: relative;
+   	width: 100%;
+   	height: 100%;
+}
+.login-box {
+	background-color: white;
+	border-radius:5px;
+	border: 2px ;
+	border-style: solid;
+	border-color: white;
+  	box-shadow: 2px 2px 2px #888888;
+  	padding:20px;
+  	width: 100%;
+   	max-width:350px;
+   	height: 500px;
+   	position: absolute;
+   	top: 50%;
+   	margin-top: -250px;
+   	padding: 3em;
+   /*设置负值，为要定位子盒子的一半高度*/
+   
+}
+@media screen and (min-width:350px){
+   .login-box {
+      left: 50%;
+      /*设置负值，为要定位子盒子的一半宽度*/
+      margin-left: -175px;
+   }
+}  
+.logo{
+	height: 150px;
+    	width: 150px;
+    	position: relative;
+    	background-color: #F0F0F0;
+   	border-radius: 70px;
+    	margin: 0 auto;
+}
+.logo::after {
+    content: ' ';
+    height: 150px;
+    width: 75px;
+    position: absolute;
+    background-color:   #D8D8D8;
+    border-radius: 0 70px 70px 0;
+    left: 75px;
+    top: 0;
+}
+.logo>.logo-block-top {
+    height: 50px;
+    width: 54px;
+    border: 10px solid #FF6600;
+    border-bottom: 0;
+    position: absolute;
+    border-radius: 25px 25px 0 0;
+    left: 47px;
+    z-index: 1001;
+    top: 20px;
+}
+.logo>.logo-block-bottom {
+    position: absolute;
+    height: 60px;
+    width: 80px;
+    background-color: #FFA000;
+    z-index: 1001;
+    top: 65px;
+    left: 35px;
+    border-radius: 7px;
+}
+.logo>.logo-block-bottom::before {
+    content: " ";
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    background-color: #EFEFEF;
+    border-radius: 5px;
+    top: 22px;
+    left: 34px;
+    box-sizing: border-box;
+}
+.logo>.logo-block-bottom::after {
+    content: " ";
+    position: absolute;
+    height: 12px;
+    width: 6px;
+    background-color: #EFEFEF;
+    border-radius: 2px;
+    top: 30px;
+    left: 37px;
+    box-sizing: border-box;
+}
+.box-title{
+	margin-top: 50px;
+	color: #FF3366;
+	font-size: 30px;
+}
+.login-form{
+	position: relative;
+	top:20px;
+}
+.input-text{
+	width:100%;
+	border-color: transparent;
+	border-bottom-color: #B8B8B8;
+  border-bottom-width:1px;
+	height: 30px;
+}
+.input-text:focus{
+	border-color: transparent;
+	border-bottom-color:#FF3366;
+	outline:none;
+	padding-bottom: 20px;
+     border-bottom-width:2px;
+}
+
+.form-group>:first-child {
+    margin-bottom: 14px;
+}
+.form-label {
+    z-index: 1;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    font-weight:100;
+    font-size: 15px;
+    margin-left: 15px;
+    color: gray;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+.input-text:focus+.form-label,
+.input-text:valid+.form-label {
+    font-size: 12px;
+    -ms-transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-25px);
+}
+.pass-box{
+  display: -webkit-flex;
+  display: flex;
+}
+.flex1 {
+  -webkit-flex: none;
+          flex: none;
+  width: 80px;
+}
+.flex2{
+ 	-webkit-flex: 1;
+          flex: 1;
+}
+.flex3{
+   -webkit-flex: none;
+          flex: none;
+  width: 80px;
+}
+/******* CHECKBOX STYLE *******/
+
+.regular-checkbox {
+  display: none;
+}
+.regular-checkbox + label {
+  background-color: white;
+  border: 1px solid #cacece;
+  padding: 9px;
+  display: inline-block;
+  position: relative;
+}
+.regular-checkbox + label:active, .regular-checkbox:checked + label:active {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.regular-checkbox:checked + label {
+  background-color: #FF3366;
+  border: 1px solid #adb8c0;
+  color: #99a1a7;
+}
+
+.regular-checkbox:checked + label:after {
+  content: '\2714';
+  font-size: 14px;
+  position: absolute;
+  top: 0px;
+  left: 3px;
+  color: white;
+}
+/************/
+a.forget-pass{
+	text-decoration:none;
+	font-size: 18px;
+	color:#FF3366;
+}
+a.forget-pass:hover{
+	text-decoration:none;
+	font-size: 18px;
+	color:gray;
+}
+.rem-pass{
+	color:gray;
+	font-size: 18px;
+}
+.login-button {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    border: 0px;
+    outline: 0px;
+    background-color: #FF3366;
+    border-radius: 30px;
+    right: -30px;
+    bottom: 91px;
+    box-shadow: 2px 0 0 rgba(0, 0, 0, 0.3) inset;
+}
+.login-button >.icon-login {
+    position: relative;
+    width: 18px;
+    height: 3px;
+    background-color:white;
+    transition: 0.3s;
+    display: block;
+    margin: auto;
+}
+.login-button >.icon-login::after {
+    content: ' ';
+    position: absolute;
+    left: 10px;
+    height: 10px;
+    width: 10px;
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
+    transform: rotate(45deg);
+    top: -4px;
+}
+.login-button:hover {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.3) inset, 
+                         0 3px 6px rgba(0, 0, 0, 0.16), 
+                         0 5px 11px rgba(0, 0, 0, 0.23)
+}
+.login-button:hover>.icon-login {
+    -ms-transform: scale(1.2);
+    =webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+
