@@ -197,8 +197,14 @@ function createGradeTag(v){
 	if('0' == v){
 		return '<option value="0" >14级</option><option value="1">15级</option><option value="2">16级</option><option value="3">17级</option>'; 
 	}
+	if('1' == v) {
+		return '<option value="1" >15级</option><option value="0">14级</option><option value="2">16级</option><option value="3">17级</option>';
+	}
+	if('2' == v){
+		return '<option value="2" >16级</option><option value="0">14级</option><option value="1">15级</option><option value="3">17级</option>';
+	}
 	else {
-		return '<option value="0" >14级</option><option value="1">15级</option><option value="2">16级</option><option value="3">17级</option>';
+		return '<option value="3" >17级</option><option value="0">14级</option><option value="1">15级</option><option value="2">16级</option>';
 	}
 }
 function showMajor(v){
@@ -217,8 +223,12 @@ function showMajor(v){
 function createMajorTag(v){
 	if('0' == v){
 		return '<option value="0" >计算机科学与技术</option><option value="1">通信工程</option><option value="2">电子信息工程</option>'; 
-	}else{
-		return '<option value="0" >计算机科学与技术</option><option value="1">通信工程</option><option value="2">电子信息工程</option>';
+	}
+	if('1' == v){
+		return '<option value="1">通信工程</option><option value="0" >计算机科学与技术</option><option value="2">电子信息工程</option>';
+	}
+	else{
+		return '<option value="2">电子信息工程</option><option value="0" >计算机科学与技术</option><option value="1">通信工程</option>';
 	}
 }
 //保存修改内容
