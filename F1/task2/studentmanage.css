@@ -1,0 +1,69 @@
+body{
+	text-align: center;
+	
+}
+/*标题的背景及设计*/
+.welcome{
+	background-color: #000066;
+	height:80px;
+
+}
+.swel{
+	position: relative;
+	top:10px;
+	font-size: 40px;
+	color: white;
+}
+/*搜索部分*/
+.stu-search{
+	position:relative;
+	top:10px;
+}
+/*增加部分*/
+.stu-ope{
+	position:relative;
+	top:10px;
+	bottom: 30px;
+}
+/*学生信息展示部分*/
+.stu-show{
+	position:relative;
+	top:40px;
+	bottom:0;
+	height:auto;
+	width:auto;
+	left:0;
+	right:0;
+	overflow:auto;
+}
+/************************/
+.mtitle{
+	color: #000066;
+	font-size: 20px;
+	font-weight: 300;
+
+}
+.ninput{
+	width:80%;
+}
+.sinput{
+	width:80%;
+}
+a:link {/* 未被访问的链接 */
+	color:#787878;
+	text-decoration:none;
+	}		
+a:visited {/* 已被访问的链接 */
+	color:#787878;
+	text-decoration:none;
+	}	
+a:hover {/* 鼠标指针移动到链接上 */
+	color:#000066;
+	text-decoration:none;
+	font-weight: 600;
+	}	
+a:active {/* 正在被点击的链接 */
+	color:#000066;
+	font-weight: 400;
+	text-decoration:none;
+	}	
