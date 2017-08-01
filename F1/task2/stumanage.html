@@ -33,14 +33,15 @@
 				<table>
 					<tr>
 						<td class="mtitle">查找学生</td>
-						<td width="100" style="overflow:hidden;">			
+						<td class="space1">		
 						<td class="stitle">学号：</td>
-						<td><input class="sinput" type="text" id="sNum" name="sNum" maxlength="10" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')"></td>
+						<td><input class="sinput" type="text" id="sNum" name="sNum" maxlength="10" onkeyup="input_num(this.id)"></td>
+						<!-- <input type="text" id="txt" onkeydown="return doit()"> -->
 						<td class="stitle">姓名:</td>
 						<td><input type="text" class="sinput" id="sName" /></td>
-						<td width="50" style="overflow:hidden;">
+						<td class="space2">
 						<td class="stitle" >性别:</td>
-						<td width="10" style="overflow:hidden;">
+						<td class="space3">
 							<td>
 								<select id="sSex" class="sslect">
 									<option value=""></option>
@@ -48,9 +49,9 @@
 									<option value="1">女</option>
 								</select>
 							</td>
-						<td width="50" style="overflow:hidden;">
+						<td class="space2">
 						<td class="stitle" >年级:</td>
-						<td width="10" style="overflow:hidden;">
+						<td class="space3">
 							<td>
 								<select id="sGrade" class="sslect">
 									<option value=""></option>
@@ -60,9 +61,9 @@
 									<option value="3">17级</option>
 								</select>
 							</td>
-							<td width="50" style="overflow:hidden;">
+							<td class="space2">
 							<td class="stitle" >专业:</td>
-							<td width="10" style="overflow:hidden;">
+							<td class="space3">
 							<td>
 								<select id="sMajor" >
 									<option value=""></option>
@@ -71,7 +72,7 @@
 									<option value="2">电子信息工程</option>
 								</select>
 							</td>
-							<td width="20" style="overflow:hidden;">
+							<td class="space3">
 						<td>&nbsp;<input type="button" class="btn" value="查询" onclick="search($('sNum').value.trim(),$('sName').value.trim(),$('sSex').value.trim(),$('sGrade').value.trim(),$('sMajor').value.trim())"/></td>
 					</tr>
 				</table>
@@ -97,24 +98,24 @@
 						<table class="" id="add-info">
 							<tr>
 								<td class="mtitle">增加学生</td>
-								<td width="100" style="overflow:hidden;">
+								<td class="space1">
 								<td class="stitle">学号：</td>
 								<td><input class="ninput" type="text" id="nNum" name="uNum" maxlength="10" 
 									onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')"></td>
 								<td class="stitle">姓名：</td>		
 								<td><input class="ninput" type="text" id="nName" name="uName" ></td>
-								<td width="50" style="overflow:hidden;">
+								<td class="space2">
 								<td class="stitle" >性别:</td>
-								<td width="10" style="overflow:hidden;">
+								<td class="space3">
 								<td>
 									<select id="nSex" >
 										<option value="0">男</option>
 										<option value="1"selected="selected">女</option>
 									</select>
 								</td>
-								<td width="50" style="overflow:hidden;">
+								<td class="space2">
 								<td class="stitle" >年级:</td>
-								<td width="10" style="overflow:hidden;">
+								<td class="space3">
 								<td>
 									<select id="nGrade" >
 										<option value="0" selected="selected">14级</option>
@@ -123,9 +124,9 @@
 										<option value="3">17级</option>
 									</select>
 								</td>
-								<td width="50" style="overflow:hidden;">
+								<td class="space2">
 								<td class="stitle" >专业:</td>
-								<td width="10" style="overflow:hidden;">
+								<td class="space3">
 								<td>
 									<select id="nMajor" >
 										<option value="0" selected="selected">计算机科学与技术</option>
@@ -133,7 +134,7 @@
 										<option value="2">电子信息工程</option>
 									</select>
 								</td>
-								<td width="20" style="overflow:hidden;">
+								<td class="space3">
 								<td>
 									<input type="button" class="btn" value="添加" onclick="addHandler()"/>
 									<input type="reset" value="reset" id="resetButton" style="display:none;"/>

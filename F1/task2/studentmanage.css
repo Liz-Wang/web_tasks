@@ -67,3 +67,18 @@ a:active {/* 正在被点击的链接 */
 	font-weight: 400;
 	text-decoration:none;
 	}	
+/*大空格*/
+.space1{
+	width:100px;
+	overflow:hidden;
+}
+/*中空格*/
+.space2{
+	width:50px;
+	overflow:hidden;
+}
+/*小空格*/
+.space3{
+	width:10px;
+	overflow:hidden;
+}

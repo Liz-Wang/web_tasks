@@ -4,6 +4,7 @@ String.prototype.trim = function() {
 	return this.replace(/(^\s*)|(\s*$)/g, "");    
 }
 
+
 //根据ID找到obj
 function $(id){
 	return document.getElementById(id);
@@ -20,11 +21,11 @@ function getStudentById (id) {
 //学生对象
 function Student(num,name,sex,grade,major){
 	this.id = new Date().getTime();
-	this.num = num ? num : null;
-	this.name = name ? name : null;
-	this.sex = sex ? sex : '0';
-	this.grade = grade ? grade : '0';
-	this.major = major ? major : '0';
+	this.num = num || null;
+	this.name = name || null;
+	this.sex = sex || '0';
+	this.grade = grade || '0';
+	this.major = major || '0';
 }
 //开始加载页面的时候就会执行的函数
 window.onload=function(){
@@ -289,5 +290,8 @@ function editHandler(obj,id){
 		alert('error!');
 	}
 }
-
-
+//用来限制学号输入框只能输入数字
+function input_num(x){
+	var text = document.getElementById(x).value;
+	document.getElementById(x).value=text.replace(/\D/g,'');
+}
