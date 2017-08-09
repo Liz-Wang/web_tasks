@@ -1,6 +1,6 @@
 ### jQuery实现轮播
 ***
-####效果图
+#### 效果图
 ![enter image description here](http://chuantu.biz/t5/165/1502265627x1822611311.png)
 ***
 #### 功能介绍
