@@ -1,0 +1,111 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  line-height: 50px;
+}
+ul {
+  list-style: outside none none;
+}
+a {
+  text-decoration: none;
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+.box {
+  width: 100%;
+  height: 100%;
+}
+.slider {
+  position: absolute;
+  width: 100vw;
+  height: 46vw;
+  margin: 0;
+  padding: 0;
+}
+.slider-main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.slider-panel {
+  z-index: 8;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.slider-panel img {
+  position: absolute;
+  margin-left: 0;
+  width: 100%;
+  height: 100%;
+}
+.slider-extra {
+  position: absolute;
+  left: 50%;
+  margin-left: -80px;
+  bottom: 5px;
+  z-index: 10;
+}
+.slider-nav {
+  position: relative;
+  z-index: 10;
+}
+.slider-item {
+  background: rgba(0,0,0,0.2);
+  border-radius: 50%;
+  color: #ffffff;
+  cursor: pointer;
+  margin: 0 2px;
+  overflow: hidden;
+  text-align: center;
+  display: inline-block;
+  height: 18px;
+  line-height: 18px;
+  width: 18px;
+}
+.slider-item-selected {
+  background: rgba(0,0,0,0.6);
+}
+.slider-page a {
+  background: rgba(0,0,0,0.2);
+  color: #C8C8C8;
+  text-align: center;
+  display: block;
+  font-family: "simsun";
+  font-size: 22px;
+  width: 28px;
+  height: 62px;
+  line-height: 62px;
+  margin-top: -31px;
+  position: absolute;
+  top: 50%;
+}
+.slider-page a:HOVER {
+  background: rgba(0,0,0,0.4);
+  text-decoration: none;
+}
+.slider-pre {
+  position: absolute;
+  z-index: 8;
+}
+.slider-next {
+  position: absolute;
+  z-index: 8;
+  left: 100%;
+  margin-left: -28px;
+}

@@ -1,0 +1,113 @@
+@var1: #ffffff;
+@var2: #C8C8C8;
+
+html, body {
+	height: 100%;
+	margin: 0;
+	line-height: 50px;
+}
+ul {
+	list-style: outside none none;
+}
+a {
+	text-decoration: none;
+	&:link {
+		text-decoration: none;
+	}
+	&:visited {
+		text-decoration: none;
+	}
+	&:hover {
+		text-decoration: none;
+	}
+	&:active {
+		text-decoration: none;
+	}
+}
+.box {
+	width: 100%;
+	height: 100%;
+}
+.slider {
+	position: absolute;
+	width: 100vw;
+	height: 46vw;
+	margin: 0;
+	padding: 0;
+	&-main {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	&-panel {
+		z-index: 8;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		img {
+			position: absolute;
+			margin-left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&-extra {
+		position: absolute;
+		left: 50%;
+		margin-left: -80px;
+		bottom: 5px;
+		z-index: 10;
+	}
+	&-nav {
+		position: relative;
+		z-index: 10;
+	}
+	&-item {
+		background: rgba(0, 0, 0, 0.2);
+		border-radius: 50%;
+		color: @var1;
+		cursor: pointer;
+		margin: 0 2px;
+		overflow: hidden;
+		text-align: center;
+		display: inline-block;
+		height: 18px;
+		line-height: 18px;
+		width: 18px;
+		&-selected {
+			background: rgba(0, 0, 0, 0.6);
+		}
+	}
+	&-page a {
+		background: rgba(0, 0, 0, 0.2);
+		color: @var2;
+		text-align: center;
+		display: block;
+		font-family: "simsun";
+		font-size: 22px;
+		width: 28px;
+		height: 62px;
+		line-height: 62px;
+		margin-top: -31px;
+		position: absolute;
+		top: 50%;
+		&:HOVER {
+			background: rgba(0, 0, 0, 0.4);
+			text-decoration: none;
+		}
+	}
+	&-pre {
+		position: absolute;
+		z-index: 8;
+	}
+	&-next {
+		position: absolute;
+		z-index: 8;
+		left: 100%;
+		margin-left: -28px;
+	}
+}
