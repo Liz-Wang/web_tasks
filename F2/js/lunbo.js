@@ -1,11 +1,24 @@
-$(document).ready(function() { 
-    var currentIndex = 0;//当前页“页码”
+$(function() { 
+    var doc = document;
     var interval;
+    var x;
+    var y;
+    var currentIndex = 0;//当前页“页码”
     var hasStarted = false;//是否已经开始轮播 
     var t = 3000; //轮播时间间隔 
-    var length = $('.slider-panel').length; 
-    //开始轮播 
-    start(); 
+    var length = $('.slider-panel').length; //开始轮播 
+    var list = doc.getElementById("slider-main");//获取图片        
+    var left = list.offsetLeft;//ul的左偏移量
+    var imgWidth=doc.getElementById("slider-panel").clientWidth;
+    var i = 0;
+    var len=list.length-1;
+    var totalWidth=imgWidth*len*(-1);
+    var speed = 350; //每次移动的距离
+    var isMoved = true; //判断touchmove事件是否要切换图片（第一次移动时切换图片，连续移动，后面的不切换图片）
+
+    
+    //开始轮播
+    start();            
     //开始就将除了第一张图片隐藏 
     $('.slider-panel:not(:first)').hide(); 
     //将第一个slider-item（图片）设为激活状态（通过样式体现） 
@@ -34,78 +47,44 @@ $(document).ready(function() {
         start(); //鼠标离开开始轮播
     }); 
     $('.slider-pre').bind('click', function() { 
-         pre(); //向前翻页
+        pre(); //向前翻页
     });  
     $('.slider-next').bind('click', function() { 
         next(); //向后翻页
     }); 
-    /** 
-     * 向前翻页 
-    */
-    function pre() { 
-        var preIndex = currentIndex; 
-        currentIndex = (--currentIndex + length) % length; //使得可以循环播放的关键
-        play(preIndex, currentIndex); 
-     } 
-    /** 
-     * 向后翻页 
-    */
-    function next() { 
-        var preIndex = currentIndex; 
-        currentIndex = ++currentIndex % length; //使得可以循环播放的关键
-        play(preIndex, currentIndex); 
-    } 
-    /** 
-     * 实现翻页
-     */
-    function play(preIndex, currentIndex) { 
-        $('.slider-panel').eq(preIndex).fadeOut(500) .parent().children().eq(currentIndex).fadeIn(1000); //遍历方式，淡入淡出
-        $('.slider-item').removeClass('slider-item-selected'); //使得页标和图片的改变同步
-        $('.slider-item').eq(currentIndex).addClass('slider-item-selected'); 
-     } 
-    /** 
-     * 开始轮播 
-     */
+    //开始轮播
     function start() { 
         if(!hasStarted) { 
             hasStarted = true; 
             interval = setInterval(next, t); 
         } 
     } 
-    /** 
-     * 停止轮播 
-     */
+    //停止轮播
     function stop() { 
         clearInterval(interval); 
         hasStarted = false; 
     } 
-    /**
-     * 原生js touch事件实现触屏滑动,待完善
-     */
+    //向前翻页
+    function pre() { 
+        var preIndex = currentIndex; 
+        currentIndex = (--currentIndex + length) % length; //使得可以循环播放的关键
+        play(preIndex, currentIndex); 
+        } 
+    //向后翻页
+    function next() { 
+        var preIndex = currentIndex; 
+        currentIndex = ++currentIndex % length; //使得可以循环播放的关键
+        play(preIndex, currentIndex); 
+    } 
+    //实现翻页
+    function play(preIndex, currentIndex) { 
+        $('.slider-panel').eq(preIndex).fadeOut(500) .parent().children().eq(currentIndex).fadeIn(1000); //遍历方式，淡入淡出
+        $('.slider-item').removeClass('slider-item-selected'); //使得页标和图片的改变同步
+        $('.slider-item').eq(currentIndex).addClass('slider-item-selected'); 
+     }      
+    
+    //原生js touch事件实现触屏滑动,待完善
     var mytouch = (function() {
-        var x, y,
-        doc = document,
-        list = doc.getElementById("slider-main"),//获取图片        
-        left = list.offsetLeft, //ul的左偏移量
-        imgWidth=doc.getElementById("slider-panel").clientWidth,
-        i = 0,
-        // dots = doc.getElementsByClassName("dot"), //获取li.dot的集合，页码块
-        len=list.length-1,
-        totalWidth=imgWidth*len*(-1),
-        speed = 350, //每次移动的距离
-        isMoved = true; //判断touchmove事件是否要切换图片（第一次移动时切换图片，连续移动，后面的不切换图片）
-       
-        var changeImg = function() { //帮助切换图片
-            if (left <= totalWidth) { //最后一张
-                i = 0;
-                left = 0;         
-            } 
-            else {
-                i++;
-                left -= speed;
-            }
-            list.style.left = left + "px";
-        };
         return { //返回对象
             tStart: function(event) { //获取触摸到屏幕时的坐标
                 if (isMoved) {
@@ -152,7 +131,8 @@ $(document).ready(function() {
                 start(); //开启自动切换图片   
             }
         };
-    })();
+     })();
+
     document.addEventListener("touchstart", mytouch.tStart, false);
     document.addEventListener("touchmove", mytouch.tMove, false);
     document.addEventListener("touchend", mytouch.tEnd, false);
