@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>颜色选择器</title>
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>	
+	<link href="style.css" type="text/css" rel="stylesheet"> 
+</head>
+<body>
+	<div id="wrap">
+	<div>
+		<div id="color-hs" style="background-color: rgb(255, 0, 24);">
+			<img src="images/bgGradient.png" />
+			<span class="color-hs-value" id="color-hs-value"></span>
+		</div>
+		<div id="color-l">
+			<img src="images/hueBar.png" />
+			<div id="color-l-value">
+				<span class="value value-r"></span>
+				<span class="value value-l"></span>
+			</div>
+		</div>
+	</div>
+	<div class="color-show">
+		<div class="color-show-hsl">
+		<span>HSV(B)表示方式： </span>
+		H：<input class="color-show-h" type="number"  value="0">&nbsp;&nbsp;
+		S：<input class="color-show-s" type="number"  value="0">&nbsp;&nbsp;
+		V：<input class="color-show-l" type="number" value="0">&nbsp;&nbsp;
+		</div>
+		<div class="color-show-hsl2">
+		<span>HSL表示方式：</span>
+		H：<input class="color-show-h2" type="number"  value="0">&nbsp;&nbsp;
+		S：<input class="color-show-s2" type="number"  value="0">&nbsp;&nbsp;
+		L：<input class="color-show-l2" type="number"  value="0">&nbsp;&nbsp;
+		</div>
+		<div class="color-show-rgb2">
+		<span>RGB表示方式：</span>	
+		R：<input class="color-show-r" type="number"  value="255">&nbsp;&nbsp;
+		G：<input class="color-show-g" type="number" value="0">&nbsp;&nbsp;
+		B：<input class="color-show-b" type="number" value="0">&nbsp;&nbsp;
+		</div>
+	</div>
+	<div class="word">
+		<span><b>选定颜色：</b></span>
+	</div>
+	<div id="color-preview"></div>
+	<div id="color-des">
+		<div id="color-des-rgb">
+			RGB：<span class="color-show-rgb"></span>
+
+		</div>
+		<div id="color-des-hex">
+			十六进制：<span class="color-show-shiliu"></span>
+		</div>
+	</div>
+
+<script src="colorSelector.js"></script> 
+</body>
+</html>
